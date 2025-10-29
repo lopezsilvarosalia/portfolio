@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rosalía López — Marketing & Strategy Portfolio</title>
-  <meta name="description" content="Explore featured marketing strategy case studies and leadership experience by Rosalía López." />
-  <meta property="og:title" content="Rosalía López — Marketing & Strategy Portfolio" />
-  <meta property="og:description" content="Explore featured marketing strategy case studies and leadership experience by Rosalía López." />
+  <meta name="color-scheme" content="light dark">
+  <title>Rosalía López — Marketing & Strategy Portfolio</title>
+  <meta name="description" content="Explore featured marketing strategy, UX and leadership projects by Rosalía López — Digital Marketing & IT Strategy Consultant." />
+  <meta property="og:title" content="Rosalía López — Marketing & Strategy Portfolio" />
+  <meta property="og:description" content="Explore featured marketing strategy case studies, UX design, and leadership projects by Rosalía López." />
   <meta property="og:image" content="assets/preview-image.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,13 +23,10 @@
       --white: #ffffff;
       --light-gray: #f5f5f8;
       --accent: #5c5470;
-
-      /* dark mode vars */
       --bg-dark: #1e1e2c;
       --text-dark: #e4e4ec;
       --light-gray-dark: #2a2a3e;
     }
-
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
@@ -38,14 +36,8 @@
       transition: background .3s, color .3s;
     }
     img { max-width: 100%; display: block; }
-    a {
-      color: var(--dark-gray);
-      text-decoration: none;
-    }
-    a:focus, button:focus {
-      outline: 2px solid var(--lavender);
-      outline-offset: 2px;
-    }
+    a { color: var(--dark-gray); text-decoration: none; }
+    a:focus, button:focus { outline: 2px solid var(--lavender); outline-offset: 2px; }
     .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
     /* Header */
@@ -61,43 +53,27 @@
     .brand {
       font-family: Poppins, Inter, sans-serif;
       font-weight: 700;
-      letter-spacing: .2px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      display: flex; align-items: center; gap: 12px;
     }
-    .brand .logo {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: var(--dark-gray);
-      color: var(--lavender);
-      display: grid;
-      place-items: center;
-      font-weight: 700;
+    .logo {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--dark-gray); color: var(--lavender);
+      display: grid; place-items: center; font-weight: 700;
     }
-    .brand .name {
-      font-size: 1.6rem;
-      color: #4a395d;
-    }
+    .name { font-size: 1.6rem; color: #4a395d; }
     .menu { display: flex; gap: 20px; align-items: center; }
     .menu a { font-weight: 600; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 10px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      cursor: pointer;
-      transition: .2s ease;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 16px; border-radius: 10px;
+      border: 1px solid transparent; font-weight: 700;
+      cursor: pointer; transition: .2s ease;
     }
     .btn-contact { background: var(--accent); color: #fff; }
     .btn-contact:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(92,84,112,.25); }
     .btn-dark { background: var(--dark-gray); color: #fff; }
     .btn-dark:hover { opacity: .9; }
-    .btn-ghost { background: transparent; border-color: rgba(47,47,64,.25); }
+    .btn-ghost { background: transparent; border: 1px solid rgba(47,47,64,.25); }
 
     /* Hero */
     .hero {
@@ -107,27 +83,15 @@
     .hero h1 {
       font-family: Poppins, Inter, sans-serif;
       font-size: clamp(26px, 5vw, 42px);
-      line-height: 1.15;
-      margin: 0 0 10px;
+      line-height: 1.15; margin: 0 0 10px;
     }
-    .hero p {
-      max-width: 780px;
-      color: #4a4959;
-      margin: 0 0 18px;
-    }
-    .hero .cta {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .hero p { max-width: 780px; color: #4a4959; margin: 0 0 18px; }
+    .hero .cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
     section { padding: 56px 0; }
     #cv { background: var(--white); }
-    .cv-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: 1fr;
-    }
+
+    .cv-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
     .card {
       background: #fff;
       border: 1px solid rgba(47,47,64,.12);
@@ -139,178 +103,73 @@
     .muted { color: #636377; }
     .list { margin: 12px 0 0; padding-left: 18px; }
     .list li { margin: 6px 0; }
+
     .exp { display: grid; gap: 14px; }
-    .exp-item {
-      border: 1px solid rgba(47,47,64,.1);
-      border-radius: 14px;
-      padding: 14px;
-    }
-    .exp-head {
-      display: flex;
-      gap: 8px;
-      align-items: baseline;
-      flex-wrap: wrap;
-    }
+    .exp-item { border: 1px solid rgba(47,47,64,.1); border-radius: 14px; padding: 14px; }
+    .exp-head { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
     .exp-head .role { font-weight: 700; }
     .exp-head .place { color: #5a596b; }
-    .exp-head .date {
-      margin-left: auto;
-      color: #6b6b80;
-      font-size: .95rem;
-    }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
+    .exp-head .date { margin-left: auto; color: #6b6b80; font-size: .95rem; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
     .tag {
-      padding: 6px 10px;
-      border-radius: 999px;
+      padding: 6px 10px; border-radius: 999px;
       border: 1px solid rgba(47,47,64,.18);
       background: linear-gradient(180deg, #fff, #faf9fd);
       font-size: .9rem;
     }
-    .skillbar { margin: 10px 0 0; }
-    .bar {
-      height: 10px;
-      background: #e9e8f0;
-      border-radius: 999px;
-      overflow: hidden;
-    }
-    .bar > span {
-      display: block;
-      height: 100%;
-      background: linear-gradient(90deg, var(--lavender), var(--dark-gray));
-    }
 
+    .skillbar { margin: 10px 0 0; }
+    .bar { height: 10px; background: #e9e8f0; border-radius: 999px; overflow: hidden; }
+    .bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--lavender), var(--dark-gray)); }
+
+    /* Projects */
     #projects { background: var(--light-gray); }
-    .grid-projects {
-      display: grid;
-      gap: 18px;
-      grid-template-columns: 1fr;
-    }
+    .grid-projects { display: grid; gap: 18px; grid-template-columns: 1fr; }
     .project {
       background: #fff;
       border: 1px solid rgba(47,47,64,.12);
-      border-radius: 16px;
-      overflow: hidden;
+      border-radius: 16px; overflow: hidden;
       transition: transform .18s ease, box-shadow .18s ease;
     }
-    .project:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 40px rgba(0,0,0,.1);
-    }
-    .project img {
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      background: #ddd;
-    }
+    .project:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,.1); }
+    .project img { aspect-ratio: 16/9; object-fit: cover; background: #ddd; }
     .project .p-wrap { padding: 14px; }
-    .subtitle {
-      color: #6b6b80;
-      font-size: .95rem;
-      margin: 2px 0 8px;
-    }
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-    .chip {
-      font-size: .85rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #faf9fd;
-      border: 1px solid rgba(47,47,64,.15);
-    }
+    .subtitle { color: #6b6b80; font-size: .95rem; margin: 2px 0 8px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { font-size: .85rem; padding: 6px 10px; border-radius: 999px; background: #faf9fd; border: 1px solid rgba(47,47,64,.15); }
+
     .actions { display: flex; gap: 10px; margin-top: 10px; }
-    .btn-outline {
-      border: 1px solid var(--dark-gray);
-      background: #fff;
-      color: var(--dark-gray);
-    }
-    .btn-outline:hover {
-      background: var(--dark-gray);
-      color: #fff;
-    }
+    .btn-outline { border: 1px solid var(--dark-gray); background: #fff; color: var(--dark-gray); }
+    .btn-outline:hover { background: var(--dark-gray); color: #fff; }
+
     .center { display: flex; justify-content: center; margin-top: 20px; }
 
-    footer {
-      background: var(--dark-gray);
-      color: #fff;
-      padding: 28px 0;
-      margin-top: 20px;
-    }
+    footer { background: var(--dark-gray); color: #fff; padding: 28px 0; margin-top: 20px; }
     .footer-grid { display: grid; gap: 14px; }
     .foot-note { color: var(--lavender); }
-    .foot-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-    .foot-links a {
-      color: #fff;
-      border-bottom: 1px dashed rgba(255,255,255,.35);
-    }
+    .foot-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .foot-links a { color: #fff; border-bottom: 1px dashed rgba(255,255,255,.35); }
     .motto { margin-top: 8px; color: #fff; }
-    .dark-mode-toggle {
-      cursor: pointer;
-      padding: 6px 10px;
-      border: 1px solid rgba(47,47,64,.2);
-      border-radius: 6px;
-      background: transparent;
-      font-size: .9rem;
-      color: var(--dark-gray);
-      transition: color .3s, border-color .3s;
-    }
 
     @media (min-width: 760px) {
       .cv-grid { grid-template-columns: 1.2fr 1fr; }
-      .grid-projects { grid-template-columns: repeat(3,1fr); }
+      .grid-projects { grid-template-columns: repeat(3, 1fr); }
     }
 
-    /* Dark mode styles */
+    /* Dark mode */
     html.dark-mode, html.dark-mode body {
       background: var(--bg-dark);
       color: var(--text-dark);
     }
-    html.dark-mode header {
-      background: linear-gradient(180deg, rgba(47,47,64,.9), rgba(47,47,64,.8));
-      border-bottom-color: rgba(255,255,255,.1);
-    }
-    html.dark-mode .logo {
-      background: var(--accent);
-      color: var(--light-gray);
-    }
-    html.dark-mode a {
-      color: var(--text-dark);
-    }
-    html.dark-mode .btn-dark {
-      background: var(--light-gray-dark);
-      color: var(--text-dark);
-    }
-    html.dark-mode .btn-contact {
-      background: var(--accent);
-      color: #fff;
-    }
-    html.dark-mode .btn-ghost {
-      border-color: rgba(255,255,255,.25);
-      color: var(--text-dark);
-    }
-    html.dark-mode .card {
+    html.dark-mode .card, html.dark-mode .project {
       background: var(--light-gray-dark);
       border-color: rgba(255,255,255,.12);
-      box-shadow: 0 8px 30px rgba(0,0,0,.6);
+      box-shadow: 0 8px 30px rgba(0,0,0,.5);
     }
-    html.dark-mode .project {
-      background: var(--light-gray-dark);
-      border-color: rgba(255,255,255,.12);
-    }
-    html.dark-mode footer {
-      background: var(--dark-gray);
-    }
+    html.dark-mode header { background: linear-gradient(180deg, rgba(47,47,64,.9), rgba(47,47,64,.8)); }
+    html.dark-mode footer { background: var(--dark-gray); }
+    html.dark-mode a { color: var(--text-dark); }
   </style>
 </head>
 <body>
@@ -318,12 +177,12 @@
     <div class="wrap nav">
       <div class="brand">
         <div class="logo">RL</div>
-        <div class="name">Rosalía López — <span class="muted">Digital Marketing & IT Strategy Consultant</span></div>
+        <div class="name">Rosalía López — <span class="muted">Digital Marketing & IT Strategy Consultant</span></div>
       </div>
       <nav class="menu">
         <a href="#cv">CV</a>
         <a href="#projects">Projects</a>
-        <button class="dark-mode-toggle" aria-label="Toggle dark mode">Toggle Dark Mode</button>
+        <button class="btn btn-ghost" id="dark-mode-toggle" aria-label="Toggle dark mode">Toggle Dark Mode</button>
         <a class="btn btn-contact" href="https://www.linkedin.com/in/rosalía-lópez" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
       </nav>
     </div>
@@ -332,10 +191,8 @@
   <section class="hero">
     <div class="wrap">
       <h1>Strategy, research, and design that connect with people.</h1>
-      <p>
-        Expert in Marketing and Management. I combine leadership, aesthetics, and data
-        to transform brands into measurable, human‑centered experiences.
-      </p>
+      <p>Expert in Marketing and Management. I combine leadership, aesthetics, and data
+        to transform brands into measurable, human-centered experiences.</p>
       <div class="cta">
         <a class="btn btn-dark" href="#cv">View CV</a>
         <a class="btn btn-ghost" href="#projects">Featured Projects</a>
@@ -350,57 +207,55 @@
         <div class="cv-grid">
           <div class="card">
             <h3>Professional Profile</h3>
-            <p class="muted">
-              I combine strategy, leadership and design to create people‑centered experiences.
-            </p>
-            <hr style="border:none;border-top:1px solid rgba(47,47,64,.12);margin:16px 0">
+            <p class="muted">I combine strategy, leadership and design to create people-centered experiences.</p>
+            <hr>
             <h3>Experience</h3>
             <div class="exp">
               <article class="exp-item">
                 <div class="exp-head">
-                  <span class="role">Co‑Founder & Digital Marketing Consultant</span>
+                  <span class="role">Co-Founder & Digital Marketing Consultant</span>
                   <span class="place">COADS Consultance</span>
                   <span class="date">2018 — Present</span>
                 </div>
-                <ul class="metrics list">
+                <ul class="list">
                   <li>Designed SEO/SEM and social campaigns improving ROI.</li>
                   <li>Developed branding ecosystems for SMEs and destinations.</li>
-                  <li>Led teams and managed end‑to‑end digital projects.</li>
+                  <li>Led teams and managed end-to-end digital projects.</li>
                 </ul>
               </article>
               <article class="exp-item">
                 <div class="exp-head">
                   <span class="role">Digital Marketing Consultant</span>
-                  <span class="place">Café de France (US)</span>
+                  <span class="place">Café de France (US)</span>
                   <span class="date">2024 — 2025</span>
                 </div>
-                <ul class="metrics list">
+                <ul class="list">
                   <li>+40% engagement (IG/TikTok) through storytelling.</li>
-                  <li>−30% CPC in Google Ads, greater local reach.</li>
+                  <li>−30% CPC in Google Ads; greater local reach.</li>
                   <li>+50% organic traffic via SEO & UX improvements.</li>
                 </ul>
               </article>
               <article class="exp-item">
                 <div class="exp-head">
                   <span class="role">Branding & Digital Marketing Consultant</span>
-                  <span class="place">J&S King Distribution (US)</span>
+                  <span class="place">J&S King Distribution (US)</span>
                   <span class="date">2023 — 2024</span>
                 </div>
-                <ul class="metrics list">
+                <ul class="list">
                   <li>Directed a full digital rebrand and new market launch.</li>
-                  <li>Created corporate identity and lead‑focused website.</li>
+                  <li>Created corporate identity and lead-focused website.</li>
                 </ul>
               </article>
             </div>
-            <hr style="border:none;border-top:1px solid rgba(47,47,64,.12);margin:16px 0">
+            <hr>
             <h3>Education & Certifications</h3>
             <ul class="list">
               <li>M.A. in Tourism Innovation & Management — IPN</li>
               <li>B.A. in IT Management — UNITEC</li>
               <li>B.A. in Communication Sciences — UAEH</li>
             </ul>
-            <hr style="border:none;border-top:1px solid rgba(47,47,64,.12);margin:16px 0">
-            <a class="btn btn-dark" href="assets/CV_RosaliaLopez.pdf" download aria-label="Download full CV">Download Full CV</a>
+            <hr>
+            <a class="btn btn-dark" href="assets/CV_RosaliaLopez.pdf" download>Download Full CV</a>
           </div>
           <aside class="card">
             <h3>Skills</h3>
@@ -414,43 +269,32 @@
               <span class="tag">Google Ads / SEO</span>
               <span class="tag">Analytics</span>
             </div>
-            <div class="skillbar">
-              <p class="muted">Digital Strategy</p>
-              <div class="bar"><span style="width:92%"></span></div>
-            </div>
-            <div class="skillbar">
-              <p class="muted">Leadership</p>
-              <div class="bar"><span style="width:85%"></span></div>
-            </div>
-            <hr style="border:none;border-top:1px solid rgba(47,47,64,.12);margin:16px 0">
-            <h3>Contact</h3>
-            <p class="muted">Open to collaborations and projects.</p>
-            <div class="tags">
-              <a class="tag" href="mailto:lopez.silva.rosali@gmail.com">✉️ Email</a>
-              <a class="tag" href="https://www.linkedin.com/in/rosalía-lópez/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
-              <a class="tag" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">🎨 Behance</a>
-            </div>
           </aside>
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
       <div class="wrap">
         <h2 style="font-family:Poppins,Inter,sans-serif;margin:0 0 16px">Featured Projects</h2>
         <p class="muted" style="margin:0 0 18px">Creativity, strategic thinking, and measurable results.</p>
+
         <div class="grid-projects">
+          <!-- Project 1 -->
           <article class="project">
             <img src="assets/omnicanal-strategy.jpg" alt="Omnichannel marketing project image" loading="lazy">
             <div class="p-wrap">
-              <h3>Omnichannel Strategy for E‑commerce</h3>
+              <h3>Omnichannel Strategy for E-commerce</h3>
               <p class="subtitle">SEO/SEM + Content + Automation</p>
-              <p>Increased organic traffic and reduced CPC with full‑funnel optimization.</p>
+              <p>Increased organic traffic and reduced CPC with full-funnel optimization.</p>
               <div class="chips">
                 <span class="chip">Growth Strategy</span><span class="chip">SEO/SEM</span><span class="chip">Automation</span>
               </div>
             </div>
           </article>
+
+          <!-- Project 2 -->
           <article class="project">
             <img src="assets/branding-destination.jpg" alt="Tourism destination branding mockup" loading="lazy">
             <div class="p-wrap">
@@ -462,80 +306,17 @@
               </div>
             </div>
           </article>
-        </div>
-        <div class="center">
-          <a class="btn btn-dark" href="#more-projects">See More Projects</a>
-        </div>
-      </div>
-    </section>
 
-    <section id="more-projects" style="background:#fdfdfd;padding:60px 0;text-align:center;">
-      <div class="wrap">
-        <h2 style="font-family:Poppins,Inter,sans-serif">More Projects Coming Soon</h2>
-        <p class="muted">I'm working on exciting new experiences — stay tuned!</p>
-      </div>
-    </section>
-
-    <section id="contact-form" style="padding:56px 0;background:var(--white);">
-      <div class="wrap">
-        <h2 style="font-family:Poppins,Inter,sans-serif;margin-bottom:16px;">Get in Touch</h2>
-        <form action="mailto:lopez.silva.rosali@gmail.com" method="post" enctype="text/plain" style="max-width:600px;margin:0 auto;">
-          <label for="name">Name</label><br>
-          <input type="text" id="name" name="Name" style="width:100%;padding:10px;margin:8px 0 16px;" required><br>
-          <label for="email">Email</label><br>
-          <input type="email" id="email" name="Email" style="width:100%;padding:10px;margin:8px 0 16px;" required><br>
-          <label for="message">Message</label><br>
-          <textarea id="message" name="Message" rows="6" style="width:100%;padding:10px;margin:8px 0 16px;" required></textarea><br>
-          <button class="btn btn-dark" type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-grid">
-      <div class="foot-links">
-        <a href="https://www.linkedin.com/in/rosalía-lópez" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">Behance</a>
-        <a href="mailto:lopez.silva.rosali@gmail.com">Email</a>
-      </div>
-      <div class="motto">“Strategy, empathy, and design: three ways to connect with people.”</div>
-      <small class="foot-note">© <span id="year"></span> Rosalía López · Lavender interface <span aria-hidden="true">💜</span></small>
-    </div>
-  </footer>
-
-  <script>
-    // actualizar año
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', e => {
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          window.scrollTo({ top: target.offsetTop - 66, behavior: 'smooth' });
-        }
-      });
-    });
-
-    // modo oscuro toggle
-    const toggle = document.querySelector('.dark-mode-toggle');
-    toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark-mode');
-      if (document.documentElement.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
-      }
-    });
-
-    // aplicar preferencia al cargar
-    if (localStorage.getItem('theme') === 'dark' || 
-        (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark-mode');
-    }
-  </script>
-
-</body>
-</html>
+          <!-- Project 3: Café de France -->
+          <article class="project">
+            <img src="assets/cafedefrance-website.jpg" alt="Screenshot of Café de France DTC website" loading="lazy">
+            <div class="p-wrap">
+              <h3>Café de France DTC — Website Creation</h3>
+              <p class="subtitle">Design, SEO optimization, and user-centric structure</p>
+              <p>Developed a modern and responsive WordPress site for a French-style restaurant in Denver.
+              Integrated menus, SEO keywords, and local campaigns to enhance online reservations and brand visibility.</p>
+              <div class="chips">
+                <span class="chip">Web Design</span><span class="chip">WordPress</span><span class="chip">SEO</span><span class="chip">UX Design</span>
+              </div>
+              <div class="actions">
+                <a class="btn btn-outline" href="https://www.cafedefrancedtc.com/" target="_blank" rel="noopener noreferrer">Visit Website</a
