@@ -1,124 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark">
-  <title>Rosalía López — Marketing & Strategy Portfolio</title>
-  <meta name="description" content="Branding, UX and digital strategy projects by Rosalía López — Digital Marketing & IT Strategy Consultant." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --lavender:#cac2da;--dark-gray:#2f2f40;--white:#ffffff;--light-gray:#f5f5f8;--accent:#5c5470;
-      --bg-dark:#1e1e2c;--text-dark:#e4e4ec;--light-gray-dark:#2a2a3e;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{background:var(--white);color:var(--dark-gray);font-family:Inter,system-ui,sans-serif;line-height:1.6}
-    img,video{max-width:100%;border-radius:12px;display:block}
-    a{color:var(--dark-gray);text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:10;background:rgba(202,194,218,.95);backdrop-filter:blur(6px);border-bottom:1px solid rgba(47,47,64,.1)}
-    .nav{display:flex;justify-content:space-between;align-items:center;height:68px}
-    .brand{display:flex;align-items:center;gap:12px;font-family:Poppins,sans-serif;font-weight:700}
-    .logo{background:var(--dark-gray);color:var(--lavender);width:36px;height:36px;border-radius:8px;display:grid;place-items:center;font-weight:700}
-    .menu{display:flex;gap:20px;align-items:center}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer;transition:.2s ease}
-    .btn-contact{background:var(--accent);color:#fff}
-    .btn-dark{background:var(--dark-gray);color:#fff}
-    .hero{background:linear-gradient(180deg,#fff 0%,#fff 60%,var(--light-gray));padding:56px 0}
-    .hero h1{font-family:Poppins,sans-serif;font-size:clamp(26px,5vw,42px);margin-bottom:10px}
-    section{padding:56px 0}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .chip{padding:6px 10px;border-radius:999px;background:#faf9fd;border:1px solid rgba(47,47,64,.15);font-size:.85rem}
-    footer{background:var(--dark-gray);color:#fff;padding:28px 0;text-align:center;margin-top:30px}
-    .foot-links a{color:#fff;margin:0 10px}
-    html.dark-mode,html.dark-mode body{background:var(--bg-dark);color:var(--text-dark)}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light">
+<title>Rosalía López — Marketing | UX | Management</title>
+<meta name="description" content="Portfolio of Rosalía López — Digital Marketing & UX Strategy Consultant." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --lavender:#cac2da;--dark-gray:#2f2f40;--white:#fff;--light-gray:#f5f5f8;--accent:#5c5470;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--white);color:var(--dark-gray);font-family:Inter,system-ui,sans-serif;line-height:1.6;}
+img{max-width:100%;border-radius:12px;display:block}
+a{text-decoration:none;color:var(--dark-gray)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:rgba(202,194,218,.95);backdrop-filter:blur(6px);border-bottom:1px solid rgba(47,47,64,.1)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:68px}
+.brand{display:flex;align-items:center;gap:12px;font-family:Poppins,sans-serif;font-weight:700}
+.logo{background:var(--dark-gray);color:var(--lavender);width:36px;height:36px;border-radius:8px;display:grid;place-items:center;font-weight:700}
+.menu{display:flex;gap:20px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer;transition:.2s ease}
+.btn-contact{background:var(--accent);color:#fff}
+.btn-dark{background:var(--dark-gray);color:#fff}
+.hero{background:linear-gradient(180deg,#fff 0%,#fff 60%,var(--light-gray));padding:56px 0;text-align:left}
+.hero h1{font-family:Poppins,sans-serif;font-size:clamp(26px,5vw,42px);margin-bottom:10px}
+.hero p{max-width:700px;margin-bottom:16px}
+section{padding:56px 0}
+h2{font-family:Poppins,sans-serif;margin-bottom:20px}
+.card{background:#fff;border:1px solid rgba(47,47,64,.12);border-radius:16px;padding:20px;box-shadow:0 8px 20px rgba(0,0,0,.04)}
+.grid{display:grid;gap:20px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{padding:6px 10px;border-radius:999px;background:#faf9fd;border:1px solid rgba(47,47,64,.15);font-size:.85rem}
+footer{background:var(--dark-gray);color:#fff;text-align:center;padding:28px 0}
+footer a{color:#fff;margin:0 8px}
+/* modal gallery */
+.modal{display:none;position:fixed;z-index:999;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center}
+.modal img{max-width:90%;max-height:85vh}
+.modal.active{display:flex;animation:fade .3s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.modal .close{position:absolute;top:20px;right:30px;color:#fff;font-size:2rem;cursor:pointer}
+.modal .arrow{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:2rem;cursor:pointer;padding:10px}
+.modal .prev{left:30px}
+.modal .next{right:30px}
+</style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-        <div class="logo">RL</div>
-        <div>Rosalía López — <span style="font-weight:400">Digital Marketing & IT Strategy Consultant</span></div>
-      </div>
-      <nav class="menu">
-        <a href="#projects">Projects</a>
-        <a class="btn btn-contact" href="https://www.linkedin.com/in/rosalía-lópez" target="_blank">LinkedIn</a>
-      </nav>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="logo">RL</div>
+      <div>Rosalía López — <span style="font-weight:400">Marketing | UX | Management</span></div>
     </div>
-  </header>
+    <nav class="menu">
+      <a href="#cv">CV</a><a href="#projects">Projects</a>
+      <a class="btn btn-contact" href="https://www.linkedin.com/in/rosalía-lópez" target="_blank">LinkedIn</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Strategy, branding, and digital transformation for growing brands.</h1>
-      <p>Marketing strategist specialized in brand identity, UX design and measurable results across digital ecosystems.</p>
-      <a class="btn btn-dark" href="#projects">View Projects</a>
+<section class="hero">
+  <div class="wrap">
+    <h1>Strategy, branding & digital transformation that connect with people.</h1>
+    <p>Digital marketing and UX strategist focused on business growth, design consistency, and human-centered innovation.</p>
+    <a class="btn btn-dark" href="#projects">View Portfolio</a>
+  </div>
+</section>
+
+<main>
+  <section id="cv">
+    <div class="wrap grid">
+      <div class="card">
+        <h2>Professional Profile</h2>
+        <p>I combine strategy, creativity and analytics to design integrated marketing and UX solutions that empower brands and improve their digital presence.</p>
+        <h3 style="margin-top:20px">Experience</h3>
+        <ul style="margin-left:20px;line-height:1.7">
+          <li>COADS Consultance — Digital Strategy (2018 – Present)</li>
+          <li>Café de France (US) — Marketing Consultant (2024 – 2025)</li>
+          <li>J&S King Distribution (US) — Branding and UX Strategy (2023 – 2024)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Education & Skills</h2>
+        <ul style="margin-left:20px;line-height:1.7">
+          <li>M.A. Tourism Innovation & Management — IPN</li>
+          <li>B.A. IT Management — UNITEC</li>
+          <li>B.A. Communication Sciences — UAEH</li>
+        </ul>
+        <div class="chips" style="margin-top:12px">
+          <span class="chip">Brand Strategy</span><span class="chip">UX Design</span><span class="chip">Leadership</span>
+          <span class="chip">SEO/SEM</span><span class="chip">Google Analytics</span><span class="chip">Figma</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main>
-    <section id="projects">
-      <div class="wrap">
-        <h2 style="font-family:Poppins,sans-serif;margin-bottom:16px">Featured Project — J&S King Distribution</h2>
-        <p style="color:#5a596b;margin-bottom:22px">Branding, UX and digital strategy for a U.S. confectionery distributor.</p>
-
-        <!-- Hero visual -->
-        <img src="assets/images/projects/jsking/J&SKingDistribution_Logo.png" alt="J&S King Distribution logo" loading="lazy">
-
-        <div style="margin:24px 0">
-          <h3 style="font-family:Poppins,sans-serif;margin-bottom:8px">Project Overview</h3>
-          <p>Led the comprehensive digital transformation and brand redesign for J&S King Distribution.
-          Defined the visual identity, optimized marketing materials, and produced digital content aligned with new growth objectives.</p>
-          <ul style="margin-left:20px;line-height:1.7">
-            <li>+60 % brand recognition increase after launch.</li>
-            <li>Developed unified corporate collateral (business cards, employee IDs, catalog).</li>
-            <li>Implemented responsive website and analytics tracking for performance visibility.</li>
-          </ul>
-        </div>
-
-        <!-- Video -->
-        <div style="margin:28px 0">
-          <h3 style="font-family:Poppins,sans-serif;margin-bottom:8px">Website Walkthrough</h3>
-          <video controls preload="metadata" playsinline poster="assets/images/projects/jsking/J&SKingDistribution_Logo.png">
-            <source src="assets/videos/projects/jsking/jskingwebsiterecordingComprmp4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- Visual Gallery -->
-        <div style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:24px">
-          <img src="assets/images/projects/jsking/BussinesCardFront.png" alt="Business card front J&S King Distribution" loading="lazy">
-          <img src="assets/images/projects/jsking/bussinesCardBack.png" alt="Business card back J&S King Distribution" loading="lazy">
-          <img src="assets/images/projects/jsking/IDEmployee.png" alt="Employee ID design J&S King Distribution" loading="lazy">
-        </div>
-
-        <!-- Catalog Download -->
-        <div style="margin-top:30px">
-          <a class="btn btn-dark" href="assets/documents/projects/jsking/Catalogo_J&SKing25.pdf" target="_blank" rel="noopener noreferrer">📄 View Product Catalog (PDF)</a>
-        </div>
-
-        <div class="chips" style="margin-top:20px">
-          <span class="chip">Branding</span><span class="chip">Digital Strategy</span><span class="chip">Corporate Identity</span><span class="chip">UX Design</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <!-- PROJECTS -->
+  <section id="projects">
     <div class="wrap">
-      <div class="foot-links">
-        <a href="https://www.linkedin.com/in/rosalía-lópez" target="_blank">LinkedIn</a>·
-        <a href="https://www.behance.net/" target="_blank">Behance</a>·
-        <a href="mailto:lopez.silva.rosali@gmail.com">Email</a>
-      </div>
-      <p style="margin-top:10px;font-style:italic">“Strategy, empathy, and design: three ways to connect with people.”</p>
-      <small style="color:var(--lavender)">© <span id="year"></span> Rosalía López · Lavender interface 💜</small>
-    </div>
-  </footer>
+      <h2>Featured Projects</h2>
+      <div class="grid grid-3">
+        <!-- J&S King Project -->
+        <article class="card">
+          <img src="assets/images/projects/jsking/J&SKingDistribution_Logo.png" alt="J&S King Distribution logo">
+          <h3 style="font-family:Poppins,sans-serif;margin-top:12px">J&S King Distribution — Branding & Digital Strategy</h3>
+          <p>Complete corporate identity system, marketing collateral, product catalog, and responsive website redesign.</p>
+          <div class="chips">
+            <span class="chip">Branding</span><span class="chip">UX Design</span><span class="chip">Strategy</span>
+          </div>
+          <div style="margin-top:14px">
+            <button class="btn btn-dark" onclick="openGallery()">View Gallery</button>
+          </div>
+        </article>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+        <!-- Café de France -->
+        <article class="card">
+          <img src="assets/images/projects/cafedefrance/cover-800.jpg" alt="Café de France website">
+          <h3 style="font-family:Poppins,sans-serif;margin-top:12px">Café de France DTC — Website Creation</h3>
+          <p>Responsive WordPress site with SEO, menu integration and local campaigns to increase reservations.</p>
+          <a class="btn btn-dark" href="https://www.cafedefrancedtc.com/" target="_blank">Visit Website</a>
+        </article>
+
+        <!-- Tourism Branding -->
+        <article class="card">
+          <img src="assets/images/projects/branding-destination.jpg" alt="Tourism branding mockup">
+          <h3 style="font-family:Poppins,sans-serif;margin-top:12px">Tourism Destination Branding</h3>
+          <p>Brand manual and visual toolkit for consistent communication in tourism campaigns.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>“Strategy, empathy, and design — three ways to connect with people.”</p>
+    <div class="foot-links" style="margin-top:10px">
+      <a href="https://www.linkedin.com/in/rosalía-lópez" target="_blank">LinkedIn</a>·
+      <a href="https://www.behance.net/" target="_blank">Behance</a>·
+      <a href="mailto:lopez.silva.rosali@gmail.com">Email</a>
+    </div>
+    <small style="color:var(--lavender)">© <span id="year"></span> Rosalía López</small>
+  </div>
+</footer>
+
+<!-- MODAL GALLERY -->
+<div class="modal" id="galleryModal">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <span class="arrow prev" onclick="prevImage()">&#10094;</span>
+  <img id="galleryImage" src="" alt="Gallery image">
+  <span class="arrow next" onclick="nextImage()">&#10095;</span>
+</div>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+
+// gallery
+const images=[
+  "assets/images/projects/jsking/J&SKingDistribution_Logo.png",
+  "assets/images/projects/jsking/BussinesCardFront.png",
+  "assets/images/projects/jsking/bussinesCardBack.png",
+  "assets/images/projects/jsking/IDEmployee.png"
+];
+let index=0;
+const modal=document.getElementById('galleryModal');
+const galleryImg=document.getElementById('galleryImage');
+function openGallery(){index=0;galleryImg.src=images[index];modal.classList.add('active');}
+function closeGallery(){modal.classList.remove('active');}
+function nextImage(){index=(index+1)%images.length;galleryImg.src=images[index];}
+function prevImage(){index=(index-1+images.length)%images.length;galleryImg.src=images[index];}
+window.addEventListener('keydown',e=>{
+  if(!modal.classList.contains('active'))return;
+  if(e.key==='ArrowRight')nextImage();
+  if(e.key==='ArrowLeft')prevImage();
+  if(e.key==='Escape')closeGallery();
+});
+</script>
 </body>
 </html>
