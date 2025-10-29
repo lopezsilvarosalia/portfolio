@@ -1,182 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="color-scheme" content="light">
-<title>Rosalía López — Marketing | UX | Management</title>
-<meta name="description" content="Portfolio of Rosalía López — Digital Marketing & UX Strategy Consultant." />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-<style>
-:root{
-  --lavender:#cac2da;--dark-gray:#2f2f40;--white:#fff;--light-gray:#f5f5f8;--accent:#5c5470;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--white);color:var(--dark-gray);font-family:Inter,system-ui,sans-serif;line-height:1.6;}
-img{max-width:100%;border-radius:12px;display:block}
-a{text-decoration:none;color:var(--dark-gray)}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:10;background:rgba(202,194,218,.95);backdrop-filter:blur(6px);border-bottom:1px solid rgba(47,47,64,.1)}
-.nav{display:flex;justify-content:space-between;align-items:center;height:68px}
-.brand{display:flex;align-items:center;gap:12px;font-family:Poppins,sans-serif;font-weight:700}
-.logo{background:var(--dark-gray);color:var(--lavender);width:36px;height:36px;border-radius:8px;display:grid;place-items:center;font-weight:700}
-.menu{display:flex;gap:20px;align-items:center}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer;transition:.2s ease}
-.btn-contact{background:var(--accent);color:#fff}
-.btn-dark{background:var(--dark-gray);color:#fff}
-.hero{background:linear-gradient(180deg,#fff 0%,#fff 60%,var(--light-gray));padding:56px 0;text-align:left}
-.hero h1{font-family:Poppins,sans-serif;font-size:clamp(26px,5vw,42px);margin-bottom:10px}
-.hero p{max-width:700px;margin-bottom:16px}
-section{padding:56px 0}
-h2{font-family:Poppins,sans-serif;margin-bottom:20px}
-.card{background:#fff;border:1px solid rgba(47,47,64,.12);border-radius:16px;padding:20px;box-shadow:0 8px 20px rgba(0,0,0,.04)}
-.grid{display:grid;gap:20px}
-.grid-3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.chip{padding:6px 10px;border-radius:999px;background:#faf9fd;border:1px solid rgba(47,47,64,.15);font-size:.85rem}
-footer{background:var(--dark-gray);color:#fff;text-align:center;padding:28px 0}
-footer a{color:#fff;margin:0 8px}
-/* modal gallery */
-.modal{display:none;position:fixed;z-index:999;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center}
-.modal img{max-width:90%;max-height:85vh}
-.modal.active{display:flex;animation:fade .3s ease}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-.modal .close{position:absolute;top:20px;right:30px;color:#fff;font-size:2rem;cursor:pointer}
-.modal .arrow{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:2rem;cursor:pointer;padding:10px}
-.modal .prev{left:30px}
-.modal .next{right:30px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark">
+  <title>Rosalía López — Marketing & Strategy Portfolio</title>
+  <meta name="description" content="Explore featured marketing, branding and UX strategy projects by Rosalía López — Digital Marketing & IT Strategy Consultant." />
+  <meta property="og:image" content="assets/preview-image.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavender:#cac2da;--dark-gray:#2f2f40;--white:#ffffff;--light-gray:#f5f5f8;--accent:#5c5470;
+      --bg-dark:#1e1e2c;--text-dark:#e4e4ec;--light-gray-dark:#2a2a3e;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{background:var(--white);color:var(--dark-gray);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+    img,video{max-width:100%;border-radius:12px;display:block}
+    a{color:var(--dark-gray);text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:10;background:rgba(202,194,218,.95);backdrop-filter:blur(6px);border-bottom:1px solid rgba(47,47,64,.1)}
+    .nav{display:flex;justify-content:space-between;align-items:center;height:68px}
+    .logo{background:var(--dark-gray);color:var(--lavender);width:36px;height:36px;border-radius:8px;display:grid;place-items:center;font-weight:700}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Poppins,sans-serif;font-weight:700}
+    .menu{display:flex;gap:20px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn-contact{background:var(--accent);color:#fff}
+    .btn-dark{background:var(--dark-gray);color:#fff}
+    .hero{background:linear-gradient(180deg,#fff 0%,#fff 60%,var(--light-gray));padding:56px 0}
+    .hero h1{font-family:Poppins,sans-serif;font-size:clamp(26px,5vw,42px);margin-bottom:10px}
+    section{padding:56px 0}
+    .project img{object-fit:cover}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .chip{padding:6px 10px;border-radius:999px;background:#faf9fd;border:1px solid rgba(47,47,64,.15);font-size:.85rem}
+    footer{background:var(--dark-gray);color:#fff;padding:28px 0;text-align:center;margin-top:30px}
+    .foot-links a{color:#fff;margin:0 10px}
+    html.dark-mode,html.dark-mode body{background:var(--bg-dark);color:var(--text-dark)}
+    html.dark-mode footer{background:#1b1b27}
+
+    /* modal gallery */
+    .modal{display:none;position:fixed;z-index:999;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center}
+    .modal img, .modal video{max-width:90%;max-height:85vh;border-radius:10px}
+    .modal.active{display:flex;animation:fade .3s ease}
+    @keyframes fade{from{opacity:0}to{opacity:1}}
+    .modal .close{position:absolute;top:20px;right:30px;color:#fff;font-size:2rem;cursor:pointer}
+    .modal .arrow{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:2rem;cursor:pointer;padding:10px}
+    .modal .prev{left:30px}
+    .modal .next{right:30px}
+  </style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <div class="brand">
-      <div class="logo">RL</div>
-      <div>Rosalía López — <span style="font-weight:400">Marketing | UX | Management</span></div>
-    </div>
-    <nav class="menu">
-      <a href="#cv">CV</a><a href="#projects">Projects</a>
-      <a class="btn btn-contact" href="https://www.linkedin.com/in/rosalía-lópez" target="_blank">LinkedIn</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <h1>Strategy, branding & digital transformation that connect with people.</h1>
-    <p>Digital marketing and UX strategist focused on business growth, design consistency, and human-centered innovation.</p>
-    <a class="btn btn-dark" href="#projects">View Portfolio</a>
-  </div>
-</section>
-
-<main>
-  <section id="cv">
-    <div class="wrap grid">
-      <div class="card">
-        <h2>Professional Profile</h2>
-        <p>I combine strategy, creativity and analytics to design integrated marketing and UX solutions that empower brands and improve their digital presence.</p>
-        <h3 style="margin-top:20px">Experience</h3>
-        <ul style="margin-left:20px;line-height:1.7">
-          <li>COADS Consultance — Digital Strategy (2018 – Present)</li>
-          <li>Café de France (US) — Marketing Consultant (2024 – 2025)</li>
-          <li>J&S King Distribution (US) — Branding and UX Strategy (2023 – 2024)</li>
-        </ul>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo">RL</div>
+        <div>Rosalía López — <span style="font-weight:400">Digital Marketing & IT Strategy Consultant</span></div>
       </div>
-      <div class="card">
-        <h2>Education & Skills</h2>
-        <ul style="margin-left:20px;line-height:1.7">
-          <li>M.A. Tourism Innovation & Management — IPN</li>
-          <li>B.A. IT Management — UNITEC</li>
-          <li>B.A. Communication Sciences — UAEH</li>
-        </ul>
-        <div class="chips" style="margin-top:12px">
-          <span class="chip">Brand Strategy</span><span class="chip">UX Design</span><span class="chip">Leadership</span>
-          <span class="chip">SEO/SEM</span><span class="chip">Google Analytics</span><span class="chip">Figma</span>
+      <nav class="menu">
+        <a href="#cv">CV</a><a href="#projects">Projects</a>
+        <a class="btn btn-contact" href="https://www.linkedin.com/in/rosalía-lópez" target="_blank">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Strategy, research, and design that connect with people.</h1>
+      <p>Marketing strategist specialized in brand growth, UX integration, and measurable results across digital ecosystems.</p>
+      <a class="btn btn-dark" href="#projects">View Projects</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="projects">
+      <div class="wrap">
+        <h2 style="font-family:Poppins,sans-serif;margin-bottom:16px">Featured Project — J&S King Distribution</h2>
+        <p class="muted" style="color:#5a596b;margin-bottom:22px">Branding, UX and digital strategy for a U.S. confectionery distributor.</p>
+
+        <!-- HERO visual -->
+        <picture>
+          <img src="assets/images/projects/jsking/J&SKingDistribution_Logo.png" alt="J&S King Distribution branding hero image showing packaging and logo system" loading="lazy" style="cursor:pointer" onclick="openGallery(0)">
+        </picture>
+
+        <!-- Description -->
+        <div style="margin:24px 0">
+          <h3 style="font-family:Poppins,sans-serif;margin-bottom:8px">Project Overview</h3>
+          <p>
+            Led the end-to-end creation of J&S King Distribution’s digital presence.
+            Defined the visual identity, optimized content architecture, and implemented
+            multi-channel strategies to expand distribution reach and awareness.
+          </p>
+          <ul style="margin-left:20px;line-height:1.7">
+            <li>+60 % brand recall among distributors after redesign</li>
+            <li>+35 % engagement through improved storytelling on campaigns</li>
+            <li>Responsive website structure aligned with UX accessibility standards</li>
+          </ul>
+        </div>
+
+        <!-- Gallery clickable thumbnails -->
+        <div style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:24px">
+          <img src="assets/images/projects/jsking/BussinesCardFront.png" alt="Business Card Front" style="cursor:pointer" onclick="openGallery(1)">
+          <img src="assets/images/projects/jsking/bussinesCardBack.png" alt="Business Card Back" style="cursor:pointer" onclick="openGallery(2)">
+          <img src="assets/images/projects/jsking/IDEmployee.png" alt="Employee ID Design" style="cursor:pointer" onclick="openGallery(3)">
+        </div>
+
+        <!-- Video evidence -->
+        <div style="margin:28px 0">
+          <h3 style="font-family:Poppins,sans-serif;margin-bottom:8px">Website Walkthrough</h3>
+          <video controls preload="metadata" playsinline poster="assets/images/projects/jsking/J&SKingDistribution_Logo.png" style="cursor:pointer" onclick="openGallery(4)">
+            <source src="assets/videos/projects/jsking/jskingwebsiterecordingComprmp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Catalog -->
+        <div style="margin-top:20px">
+          <a class="btn btn-dark" href="assets/documents/projects/jsking/Catalogo_J&SKing25.pdf" target="_blank" rel="noopener noreferrer">📄 View Product Catalog (PDF)</a>
+        </div>
+
+        <!-- Tags & CTA -->
+        <div class="chips" style="margin-top:20px">
+          <span class="chip">Branding</span><span class="chip">Digital Strategy</span><span class="chip">UX Design</span><span class="chip">Marketing Campaigns</span>
+        </div>
+        <div style="margin-top:20px">
+          <a class="btn btn-dark" href="https://www.jskingdistribution.com" target="_blank" rel="noopener noreferrer">View Campaign</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="wrap">
-      <h2>Featured Projects</h2>
-      <div class="grid grid-3">
-        <!-- J&S King Project -->
-        <article class="card">
-          <img src="assets/images/projects/jsking/J&SKingDistribution_Logo.png" alt="J&S King Distribution logo">
-          <h3 style="font-family:Poppins,sans-serif;margin-top:12px">J&S King Distribution — Branding & Digital Strategy</h3>
-          <p>Complete corporate identity system, marketing collateral, product catalog, and responsive website redesign.</p>
-          <div class="chips">
-            <span class="chip">Branding</span><span class="chip">UX Design</span><span class="chip">Strategy</span>
-          </div>
-          <div style="margin-top:14px">
-            <button class="btn btn-dark" onclick="openGallery()">View Gallery</button>
-          </div>
-        </article>
+    <!-- OTHER PROJECTS -->
+    <section id="more-projects" style="background:var(--light-gray);">
+      <div class="wrap">
+        <h2 style="font-family:Poppins,sans-serif;margin-bottom:16px">Other Projects</h2>
+        <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+          <article class="project">
+            <img src="assets/images/projects/cafedefrance/cover-800.jpg" alt="Café de France website homepage" loading="lazy">
+            <div class="p-wrap">
+              <h3 style="font-family:Poppins,sans-serif">Café de France DTC — Website Creation</h3>
+              <p class="subtitle">Design, SEO optimization, and user-centric structure</p>
+              <p>Developed a responsive WordPress site with integrated menus, SEO keywords, and campaigns that boosted local visibility.</p>
+              <div class="chips">
+                <span class="chip">Web Design</span><span class="chip">WordPress</span><span class="chip">SEO</span><span class="chip">UX Design</span>
+              </div>
+              <div style="margin-top:10px">
+                <a class="btn btn-dark" href="https://www.cafedefrancedtc.com/" target="_blank">Visit Website</a>
+              </div>
+            </div>
+          </article>
 
-        <!-- Café de France -->
-        <article class="card">
-          <img src="assets/images/projects/cafedefrance/cover-800.jpg" alt="Café de France website">
-          <h3 style="font-family:Poppins,sans-serif;margin-top:12px">Café de France DTC — Website Creation</h3>
-          <p>Responsive WordPress site with SEO, menu integration and local campaigns to increase reservations.</p>
-          <a class="btn btn-dark" href="https://www.cafedefrancedtc.com/" target="_blank">Visit Website</a>
-        </article>
-
-        <!-- Tourism Branding -->
-        <article class="card">
-          <img src="assets/images/projects/branding-destination.jpg" alt="Tourism branding mockup">
-          <h3 style="font-family:Poppins,sans-serif;margin-top:12px">Tourism Destination Branding</h3>
-          <p>Brand manual and visual toolkit for consistent communication in tourism campaigns.</p>
-        </article>
+          <article class="project">
+            <img src="assets/images/projects/branding-destination.jpg" alt="Tourism destination branding mockup" loading="lazy">
+            <div class="p-wrap">
+              <h3 style="font-family:Poppins,sans-serif">Tourism Destination Branding</h3>
+              <p class="subtitle">Brand narrative and visual systems</p>
+              <p>Created a full brand manual and visual kit for consistent communication across tourism promotion campaigns.</p>
+              <div class="chips">
+                <span class="chip">Branding</span><span class="chip">Storytelling</span><span class="chip">Visual Design</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer>
-  <div class="wrap">
-    <p>“Strategy, empathy, and design — three ways to connect with people.”</p>
-    <div class="foot-links" style="margin-top:10px">
-      <a href="https://www.linkedin.com/in/rosalía-lópez" target="_blank">LinkedIn</a>·
-      <a href="https://www.behance.net/" target="_blank">Behance</a>·
-      <a href="mailto:lopez.silva.rosali@gmail.com">Email</a>
+  <footer>
+    <div class="wrap">
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/in/rosalía-lópez" target="_blank">LinkedIn</a>·
+        <a href="https://www.behance.net/" target="_blank">Behance</a>·
+        <a href="mailto:lopez.silva.rosali@gmail.com">Email</a>
+      </div>
+      <p style="margin-top:10px;font-style:italic">“Strategy, empathy, and design: three ways to connect with people.”</p>
+      <small style="color:var(--lavender)">© <span id="year"></span> Rosalía López · Lavender interface 💜</small>
     </div>
-    <small style="color:var(--lavender)">© <span id="year"></span> Rosalía López</small>
+  </footer>
+
+  <!-- Modal gallery -->
+  <div class="modal" id="galleryModal">
+    <span class="close" onclick="closeGallery()">&times;</span>
+    <span class="arrow prev" onclick="prevImage()">&#10094;</span>
+    <img id="galleryImage" src="" alt="Gallery content" />
+    <video id="galleryVideo" controls style="display:none"></video>
+    <span class="arrow next" onclick="nextImage()">&#10095;</span>
   </div>
-</footer>
 
-<!-- MODAL GALLERY -->
-<div class="modal" id="galleryModal">
-  <span class="close" onclick="closeGallery()">&times;</span>
-  <span class="arrow prev" onclick="prevImage()">&#10094;</span>
-  <img id="galleryImage" src="" alt="Gallery image">
-  <span class="arrow next" onclick="nextImage()">&#10095;</span>
-</div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();
+    const items=[
+      {type:"image",src:"assets/images/projects/jsking/J&SKingDistribution_Logo.png"},
+      {type:"image",src:"assets/images/projects/jsking/BussinesCardFront.png"},
+      {type:"image",src:"assets/images/projects/jsking/bussinesCardBack.png"},
+      {type:"image",src:"assets/images/projects/jsking/IDEmployee.png"},
+      {type:"video",src:"assets/videos/projects/jsking/jskingwebsiterecordingComprmp4.mp4"}
+    ];
+    let index=0;
+    const modal=document.getElementById('galleryModal');
+    const imgEl=document.getElementById('galleryImage');
+    const vidEl=document.getElementById('galleryVideo');
 
-// gallery
-const images=[
-  "assets/images/projects/jsking/J&SKingDistribution_Logo.png",
-  "assets/images/projects/jsking/BussinesCardFront.png",
-  "assets/images/projects/jsking/bussinesCardBack.png",
-  "assets/images/projects/jsking/IDEmployee.png"
-];
-let index=0;
-const modal=document.getElementById('galleryModal');
-const galleryImg=document.getElementById('galleryImage');
-function openGallery(){index=0;galleryImg.src=images[index];modal.classList.add('active');}
-function closeGallery(){modal.classList.remove('active');}
-function nextImage(){index=(index+1)%images.length;galleryImg.src=images[index];}
-function prevImage(){index=(index-1+images.length)%images.length;galleryImg.src=images[index];}
-window.addEventListener('keydown',e=>{
-  if(!modal.classList.contains('active'))return;
-  if(e.key==='ArrowRight')nextImage();
-  if(e.key==='ArrowLeft')prevImage();
-  if(e.key==='Escape')closeGallery();
-});
-</script>
+    function openGallery(i){
+      index=i;
+      showItem();
+      modal.classList.add('active');
+    }
+    function closeGallery(){modal.classList.remove('active');vidEl.pause();}
+    function nextImage(){index=(index+1)%items.length;showItem();}
+    function prevImage(){index=(index-1+items.length)%items.length;showItem();}
+    function showItem(){
+      const item=items[index];
+      if(item.type==="image"){
+        vidEl.style.display="none";vidEl.pause();
+        imgEl.style.display="block";imgEl.src=item.src;
+      } else {
+        imgEl.style.display="none";
+        vidEl.style.display="block";
+        vidEl.src=item.src;vidEl.play();
+      }
+    }
+    window.addEventListener("keydown",e=>{
+      if(!modal.classList.contains("active"))return;
+      if(e.key==="ArrowRight")nextImage();
+      if(e.key==="ArrowLeft")prevImage();
+      if(e.key==="Escape")closeGallery();
+    });
+  </script>
 </body>
 </html>
