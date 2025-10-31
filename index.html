@@ -282,10 +282,12 @@
             Led the complete creation of the company’s corporate identity from scratch,
             building a cohesive and scalable brand aligned with its market expansion goals.
           </p>
+
           <p>
             Developed and implemented internal processes to optimize economic and human resources,
             enhancing efficiency and significantly increasing overall productivity.
           </p>
+
           <p>
             Executed targeted Facebook and TikTok campaigns that strengthened brand awareness
             and engagement across key markets.
@@ -298,23 +300,17 @@
             <span class="chip">Social Media Campaigns</span>
           </div>
 
-          <!-- Multimedia Evidence Gallery -->
-          <div style="margin-top:24px;">
+          <!-- Clean evidence section (open in new tabs) -->
+          <div style="margin-top:28px;">
             <h4 style="font-family:Poppins,sans-serif;margin-bottom:12px;">Project Evidence</h4>
-
-            <div class="gallery-grid" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
-              <img src="assets/J&SKingDistribution_Logo.png" alt="Logo J&S King Distribution" onclick="openModal(0)">
-              <img src="assets/BussinesCardFront.png" alt="Business Card Front" onclick="openModal(1)">
-              <img src="assets/bussinesCardBack.png" alt="Business Card Back" onclick="openModal(2)">
-              <img src="assets/IDEmployee.png" alt="Employee ID Design" onclick="openModal(3)">
-              <video src="assets/jskingwebsiterecordingComprmp4.mp4" muted onclick="openModal(4)" style="cursor:pointer;border-radius:12px;"></video>
-            </div>
-
-            <p style="margin-top:14px;">
-              📄 <a href="assets/Catalogo_J&SKing25.pdf" target="_blank" style="color:var(--accent);font-weight:600;">
-                View full product catalog (PDF)
-              </a>
-            </p>
+            <ul style="list-style:none;padding:0;line-height:1.8;">
+              <li>🖼️ <a href="assets/J&SKingDistribution_Logo.png" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600;">Corporate Logo (PNG)</a></li>
+              <li>🖼️ <a href="assets/BussinesCardFront.png" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600;">Business Card — Front</a></li>
+              <li>🖼️ <a href="assets/bussinesCardBack.png" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600;">Business Card — Back</a></li>
+              <li>🖼️ <a href="assets/IDEmployee.png" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600;">Employee ID Card</a></li>
+              <li>🎥 <a href="assets/jskingwebsiterecordingComprmp4.mp4" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600;">Website Walkthrough (Video)</a></li>
+              <li>📄 <a href="assets/Catalogo_J&SKing25.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600;">Product Catalog (PDF)</a></li>
+            </ul>
           </div>
         </div>
       </article>
@@ -338,73 +334,17 @@
             <span class="chip">SEO</span>
             <span class="chip">UX Design</span>
           </div>
+          <p style="margin-top:20px;">
+            🌐 <a href="https://www.cafedefrancedtc.com/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600;">
+              Visit Website
+            </a>
+          </p>
         </div>
       </article>
     </div>
   </div>
+</section>
 
-  <!-- Modal Viewer -->
-  <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:1000;align-items:center;justify-content:center;">
-    <span onclick="closeModal()" style="position:absolute;top:20px;right:30px;color:#fff;font-size:2rem;cursor:pointer;">&times;</span>
-    <span id="prevBtn" style="position:absolute;left:30px;font-size:2rem;color:#fff;cursor:pointer;">&#10094;</span>
-    <span id="nextBtn" style="position:absolute;right:30px;font-size:2rem;color:#fff;cursor:pointer;">&#10095;</span>
-    <img id="lightboxImg" src="" alt="" style="max-width:90%;max-height:80vh;border-radius:12px;display:none;">
-    <video id="lightboxVid" controls style="max-width:90%;max-height:80vh;border-radius:12px;display:none;"></video>
-  </div>
-
-  <script>
-    const items = [
-      {type:'image',src:'assets/J&SKingDistribution_Logo.png'},
-      {type:'image',src:'assets/BussinesCardFront.png'},
-      {type:'image',src:'assets/bussinesCardBack.png'},
-      {type:'image',src:'assets/IDEmployee.png'},
-      {type:'video',src:'assets/jskingwebsiterecordingComprmp4.mp4'}
-    ];
-    let current = 0;
-    const lightbox = document.getElementById('lightbox');
-    const imgEl = document.getElementById('lightboxImg');
-    const vidEl = document.getElementById('lightboxVid');
-
-    function openModal(i){
-      current = i;
-      showItem();
-      lightbox.style.display = 'flex';
-    }
-    function closeModal(){
-      lightbox.style.display = 'none';
-      vidEl.pause();
-    }
-    function nextItem(){
-      current = (current + 1) % items.length;
-      showItem();
-    }
-    function prevItem(){
-      current = (current - 1 + items.length) % items.length;
-      showItem();
-    }
-    document.getElementById('nextBtn').onclick = nextItem;
-    document.getElementById('prevBtn').onclick = prevItem;
-    window.addEventListener('keydown', e=>{
-      if(lightbox.style.display==='flex'){
-        if(e.key==='ArrowRight') nextItem();
-        if(e.key==='ArrowLeft') prevItem();
-        if(e.key==='Escape') closeModal();
-      }
-    });
-    function showItem(){
-      const item = items[current];
-      if(item.type==='image'){
-        vidEl.style.display='none';
-        imgEl.style.display='block';
-        imgEl.src = item.src;
-      } else {
-        imgEl.style.display='none';
-        vidEl.style.display='block';
-        vidEl.src = item.src;
-        vidEl.play();
-      }
-    }
-  </script>
 </section>
 
   </main>
