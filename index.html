@@ -240,12 +240,19 @@
               <li>B.A. in Communication Sciences — UAEH</li>
             </ul>
             <hr>
-            <a class="btn btn-dark"
-   href="assets/RosaliaLopezResume.pdf"
-   download="RosaliaLopezResume.pdf"
-   rel="noopener noreferrer">
-   Download Full CV
-</a>
+       <button id="downloadCV" class="btn btn-dark">Download Full CV</button>
+
+<script>
+  document.getElementById("downloadCV").addEventListener("click", function() {
+    const link = document.createElement("a");
+    link.href = "assets/RosaliaLopezResume.pdf";
+    link.download = "RosaliaLopezResume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>
+
           </div>
 
           <aside class="card">
